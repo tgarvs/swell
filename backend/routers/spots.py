@@ -1,13 +1,8 @@
 
-
-import json
-from schemas.spot import Spot
+import routers.utils as utils
 from fastapi import APIRouter, HTTPException
 
-
-with open("backend/data/spots.json") as f :
-    data = json.load(f)
-spot_list = [Spot(**spot_dict) for spot_dict in data]
+spot_list = utils.get_spot_list
 
 router = APIRouter(
     prefix = "",
@@ -21,10 +16,7 @@ def get_spots() :
 
 @router.get("/spots/{spot_id}") 
 def get_specific_spot(spot_id: str) :
-    for spot in spot_list :
-        if spot_id == spot.id :
-            return spot
-
-    raise HTTPException(status_code=404, detail="Spot not found") 
+    utils.does_spot_exist(spot_list, spot_id)
     
+
 
