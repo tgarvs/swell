@@ -1,0 +1,24 @@
+
+[
+    {
+        "id" : "rossnowlagh",
+        "name" : "Rossnowlagh",
+        "latitude": 54.5576,
+        "longitude" : -8.2058
+    },
+
+    {
+        "id" : "bundoran",
+        "name" : "Bundoran",
+        "latitude": 54.4791,
+        "longitude" : -8.2779
+    },
+
+    {
+        "id" : "mullaghmore",
+        "name" : "Mullaghmore",
+        "latitude": 54.4655,
+        "longitude" : -8.4495
+    }
+
+]
