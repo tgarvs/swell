@@ -6,7 +6,7 @@ import os
 load_dotenv()
 def get_stormglass(lat: float, lng: float):
     
-    start = datetime.now(datetime.timezone.utc)
+    start = start = datetime.utcnow()
     end = start + timedelta(hours=24)   
 
     response = httpx.get(

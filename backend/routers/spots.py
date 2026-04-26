@@ -1,8 +1,8 @@
 
 import routers.utils as utils
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter
 
-spot_list = utils.get_spot_list
+spot_list = utils.get_spot_list()
 
 router = APIRouter(
     prefix = "",

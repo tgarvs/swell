@@ -22,3 +22,5 @@ class ForecastResponse(BaseModel):
     spot_id: str
     spot_name: str
     readings: List[HourlyReading]
+
+
